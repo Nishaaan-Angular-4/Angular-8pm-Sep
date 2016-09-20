@@ -1,0 +1,15 @@
+.div-outer {
+    border: 2px solid black;
+    height: 200px;
+    margin: 10px;
+}
+.div-inner {
+    border: 2px solid black;
+    margin: 20px;
+    height: 140px;
+}
+.label-control {
+    padding: 20px;
+    width: 100px;
+    margin: 10px;
+}

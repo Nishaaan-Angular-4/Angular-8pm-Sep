@@ -1,0 +1,28 @@
+/*
+1. Tag/element based styling
+2. class base Styling
+3. id based styling
+*/
+
+
+/*element based styling*/
+
+body {
+    background-color: beige;
+}
+label {
+    font-size: 18px;
+}
+
+/*id based Styling*/
+
+#spnTerms {
+    color: red;
+}
+
+/*class based styling*/
+
+.txt-control {
+    width: 200px;
+    height: 20px;
+}

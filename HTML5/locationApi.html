@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Example of GeoLocation
+    </title>
+    <style>
+        #result {
+            padding: 10px;
+            margin: 20px;
+            border: 2px solid green;
+        }
+
+    </style>
+
+    <head>
+        <script>
+            function getMyLocation() {
+                navigator.geolocation.getCurrentPosition(locationSuccess, locationFail);
+            }
+
+            function locationSuccess(position) {
+                latitude = position.coords.latitude;
+                longitude = position.coords.longitude;
+                document.getElementById("result").innerHTML = "location in latitude and longitude is " + latitude + "ANd " + longitude;
+            }
+
+            function locationFail() {
+                alert("Oops, could not find you.");
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <button onclick="getMyLocation()">Run Geolocation</button>
+        <div id="result">Result will be displayed here</div>
+    </body>
+
+</html>

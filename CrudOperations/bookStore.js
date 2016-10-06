@@ -7,7 +7,6 @@
     var createRow = function (book) {
         console.log(book);
         var row = document.createElement("tr");
-
         createColumn(book.bookId, row);
         createColumn(book.author, row);
         createColumn(book.price, row);

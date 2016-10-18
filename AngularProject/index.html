@@ -1,0 +1,28 @@
+<html ng-app="flipsnap">
+
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-controller="headerCtrl">
+        <!-- header-->
+        <div ng-include="'app/header/header.html'"></div>
+        <!--content-->
+
+        <!--Footer-->
+        <div ng-include="'app/footer/footer.html'"></div>
+    </div>
+
+    <script src="app/header/header.js"></script>
+    <script src="app/header/headerCtrl.js"></script>
+
+    <script src="app/app.js"></script>
+</body>
+
+</html>

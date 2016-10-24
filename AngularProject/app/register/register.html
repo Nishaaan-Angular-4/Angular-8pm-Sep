@@ -1,6 +1,4 @@
 <h1>Register</h1>
-
-
 <div class="form-horizontal" ng-controller="registerCtrl">
 
     <div class="form-group">
@@ -49,38 +47,19 @@
     <div class="form-group">
         <label class="control-label col-xs-2">Country</label>
         <div class="col-xs-4">
-            <select class="form-control" ng-model="user.country" ng-options="country.name for country in countryList"> 
+            <select class="form-control" ng-change="loadStateList()" ng-model="user.country" ng-options="country.name for country in countryList">
                 <option value="">Please Select</option>
             </select>
         </div>
     </div>
-    {{user}}
-
-    <!--<div class="form-group">
-
-        <label for="inputPassword" class="control-label col-xs-2">Password</label>
-
-        <div class="col-xs-10">
-
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-
+    <div class="form-group">
+        <label class="control-label col-xs-2">State</label>
+        <div class="col-xs-4">
+            <select class="form-control" ng-model="user.state" ng-options="state.name for state in stateList">
+                <option value="">Please Select</option>
+            </select>
         </div>
-
-    </div>-->
-
-    <!--<div class="form-group">
-
-        <div class="col-xs-offset-2 col-xs-10">
-
-            <div class="checkbox">
-
-                <label><input type="checkbox"> Remember me</label>
-
-            </div>
-
-        </div>
-
-    </div>-->
+    </div>
 
     <div class="form-group">
 
@@ -91,5 +70,6 @@
         </div>
 
     </div>
+    {{user|json}}
 
 </div>

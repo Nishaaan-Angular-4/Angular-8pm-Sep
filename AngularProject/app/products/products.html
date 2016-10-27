@@ -1,18 +1,30 @@
 <div ng-controller="productCtrl">
-    <div class="row" ng-repeat="product in products">
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="{{product.imageUrl}}" alt="125x125">
-            </a>
-        </div>
+    <div class="row">
         <div class="col-xs-4">
-            <div>
-                <label ng-bind="product.modelName" class="label label-info"></label>
-            </div>
-        </div>
-        <div class="col-xs-3">
-            <label class="label label-warning" ng-bind="product.modelPrice"></label>
+            <input type="text" ng-model="searchModel" class="form-control" placeholder="Search Model">
+             <input type="text" ng-model="searchMake" class="form-control" placeholder="Search Make">
         </div>
     </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Make</td>
+                <td>Model</td>
+                <td ng-click="sortByYear()"><a href="">Year</a></td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tr ng-repeat="vehicle in vehicles
+                       |filter:{Model:searchModel}
+                       |filter:{Make:searchMake}
+                       |orderBy:yearSort">
+        <td>{{$index}}</td>
+            <td>{{vehicle.Make|uppercase}}</td>
+            <td>{{vehicle.Model|lowercase}}</td>
+            <td>{{vehicle.Year}}</td>
+            <td>{{vehicle.Price|currency:"RS."}}</td>
+        </tr>
+    </table>
 
 </div>

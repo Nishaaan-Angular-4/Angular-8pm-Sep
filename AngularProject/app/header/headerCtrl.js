@@ -8,6 +8,7 @@
             console.log(data);
             $scope.contentUrl = data.templateUrl;
         };
+        $scope.projectName = "The Presitige Group";
     };
     angular.module("header").controller("headerCtrl", headerCtrlFn);
 })();

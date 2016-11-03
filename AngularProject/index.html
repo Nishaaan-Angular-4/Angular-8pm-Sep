@@ -12,8 +12,18 @@
 
 <body>
     <div class="container" ng-controller="headerCtrl">
+        <!--Element-->
+        <!--<custom-nav-bar></custom-nav-bar>-->
+
+        <!--As attribute-->
+        <div custom-nav-bar></div>
+
+        <div custom-scope myproject={{projectName}}></div>
+
+        <!--As A class-->
+        <!--<div class="custom-nav-bar"></div>-->
         <!-- header-->
-        <div ng-include="'app/header/header.html'"></div>
+        <!--<div ng-include="'app/header/header.html'"></div>-->
         <!--content-->
         <div ng-include="contentUrl"></div>
         <!--Footer-->
@@ -32,6 +42,12 @@
 
     <script src="app/common/common.js"></script>
     <script src="app/common/commonLookupSvc.js"></script>
+    <script src="app/common/commonPhoneFormatter.js"></script>
+    <script src="app/common/customDirective.js"></script>
+    <script src="app/common/customNavBar.js"></script>
+    <script src="app/common/customClick.js"></script>
+    <script src="app/common/magicDir.js"></script>
+    <script src="app/common/customScope.js"></script>
     <script src="app/app.js"></script>
 </body>
 

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-xs-4">
             <input type="text" ng-model="searchModel" class="form-control" placeholder="Search Model">
-             <input type="text" ng-model="searchMake" class="form-control" placeholder="Search Make">
+            <input type="text" ng-model="searchMake" class="form-control" placeholder="Search Make">
         </div>
     </div>
     <table class="table table-striped">
@@ -11,7 +11,7 @@
                 <td>#</td>
                 <td>Make</td>
                 <td>Model</td>
-                <td ng-click="sortByYear()"><a href="">Year</a></td>
+                <td custom-click="sortByYear()"><a href="">Year</a></td>
                 <td>Price</td>
             </tr>
         </thead>
@@ -19,11 +19,12 @@
                        |filter:{Model:searchModel}
                        |filter:{Make:searchMake}
                        |orderBy:yearSort">
-        <td>{{$index}}</td>
+            <td>{{$index}}</td>
             <td>{{vehicle.Make|uppercase}}</td>
             <td>{{vehicle.Model|lowercase}}</td>
             <td>{{vehicle.Year}}</td>
             <td>{{vehicle.Price|currency:"RS."}}</td>
+            <td>{{vehicle.Contact|phoneFormat}}</td>
         </tr>
     </table>
 
